@@ -1,12 +1,17 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { Toaster } from "@/components/ui/sonner";
+import Image from 'next/image';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ 
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'Contact Form',
+  title: 'Yoko Styles',
   description: 'Submit your inquiry and we\'ll get back to you',
 };
 
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         {children}
         <Toaster />
       </body>

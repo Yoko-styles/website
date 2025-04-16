@@ -99,13 +99,13 @@ export default function ContactPage() {
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted">
       <Dialog>
         <DialogTrigger asChild>
-          <Button size="lg" className="px-8">
+          <Button size="lg" className="px-8 font-poppins font-bold">
             Contact Us
           </Button>
         </DialogTrigger>
         <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Get in Touch</DialogTitle>
+            <DialogTitle className="font-poppins font-bold">Get in Touch</DialogTitle>
           </DialogHeader>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -114,7 +114,7 @@ export default function ContactPage() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel className="font-poppins font-bold">Name</FormLabel>
                     <FormControl>
                       <Input placeholder="John Doe" {...field} />
                     </FormControl>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="font-poppins font-bold">Email</FormLabel>
                     <FormControl>
                       <Input type="email" placeholder="john@example.com" {...field} />
                     </FormControl>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   name="countryCode"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Country Code</FormLabel>
+                      <FormLabel className="font-poppins font-bold">Country Code</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number (Optional)</FormLabel>
+                      <FormLabel className="font-poppins font-bold">Phone Number (Optional)</FormLabel>
                       <FormControl>
                         <Input type="tel" placeholder="(555) 000-0000" {...field} />
                       </FormControl>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                 name="inquiryType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Type of Inquiry</FormLabel>
+                    <FormLabel className="font-poppins font-bold">Type of Inquiry</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel className="font-poppins font-bold">Message</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Please describe your inquiry or use case..."
@@ -226,7 +226,7 @@ export default function ContactPage() {
                 name="contactMethod"
                 render={({ field }) => (
                   <FormItem className="space-y-3">
-                    <FormLabel>Preferred Contact Method</FormLabel>
+                    <FormLabel className="font-poppins font-bold">Preferred Contact Method</FormLabel>
                     <FormControl>
                       <RadioGroup
                         onValueChange={field.onChange}
@@ -267,7 +267,7 @@ export default function ContactPage() {
                 name="source"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>How Did You Hear About Us?</FormLabel>
+                    <FormLabel className="font-poppins font-bold">How Did You Hear About Us?</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -299,7 +299,7 @@ export default function ContactPage() {
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel>
+                      <FormLabel className="font-poppins font-bold">
                         I agree to the terms and conditions
                       </FormLabel>
                       <FormDescription>
