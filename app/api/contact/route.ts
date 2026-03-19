@@ -44,26 +44,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Insert data into PostgreSQL
-    // Ensure table exists (safe to run each time)
-    const createTable = `
-      CREATE TABLE IF NOT EXISTS contact_submissions (
-        id SERIAL PRIMARY KEY,
-        name TEXT NOT NULL,
-        email TEXT NOT NULL,
-        country_code TEXT,
-        phone_number TEXT,
-        inquiry_type TEXT NOT NULL,
-        message TEXT NOT NULL,
-        preferred_contact TEXT DEFAULT 'email',
-        hear_about TEXT,
-        agree_to_terms BOOLEAN NOT NULL,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
-      );
-    `;
-
-    await client.query(createTable);
-
     const query = `
       INSERT INTO contact_submissions (
         name, email, country_code, phone_number, inquiry_type, 

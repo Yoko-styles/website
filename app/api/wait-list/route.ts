@@ -17,18 +17,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
-    // Ensure table exists
-    const createTable = `
-      CREATE TABLE IF NOT EXISTS waitlist_submissions (
-        id SERIAL PRIMARY KEY,
-        name TEXT,
-        email TEXT NOT NULL UNIQUE,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
-      );
-    `;
-
-    await client.query(createTable);
-
     const insertQuery = `
       INSERT INTO waitlist_submissions (name, email)
       VALUES ($1, $2)
