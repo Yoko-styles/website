@@ -31,7 +31,7 @@ export default function Home() {
 
         <section id="associations" className="py-10 bg-white border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-xs uppercase tracking-widest text-gray-500">Associated with</p>
+            <p className="text-sm text-gray-500">Associated with</p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 items-center justify-items-center">
               {[
                 ["/iit.png", "IIIT Hyderabad"],
@@ -53,22 +53,22 @@ export default function Home() {
                 <p className="text-base md:text-lg text-gray-700 mb-6">YOKO Styles converts ideas into production-ready patterns using multimodal AI trained on expert datasets. Faster iterations, fewer samples, and consistent sizing—designed for teams and factories.</p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="bg-white p-4 rounded-md border border-gray-200">
                     <div className="text-sm text-gray-500">Pattern creation</div>
                     <div className="mt-1 text-xl font-semibold text-black">Seconds</div>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="bg-white p-4 rounded-md border border-gray-200">
                     <div className="text-sm text-gray-500">Development cycle</div>
                     <div className="mt-1 text-xl font-semibold text-black">Minutes</div>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="bg-white p-4 rounded-md border border-gray-200">
                     <div className="text-sm text-gray-500">Sampling cost</div>
                     <div className="mt-1 text-xl font-semibold text-black">80% less</div>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="bg-white p-4 rounded-md border border-gray-200">
                     <div className="text-sm text-gray-500">Expert dependency</div>
                     <div className="mt-1 text-xl font-semibold text-black">Optional</div>
                   </div>
@@ -258,7 +258,7 @@ export default function Home() {
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-md border border-gray-200">
                 <div className="text-sm text-gray-500">Full Design App</div>
                 <div className="mt-2 text-lg font-semibold text-gray-900">End-to-end creative tools</div>
                 <p className="mt-2 text-sm text-gray-600">Design, grade, and export production-ready patterns with collaboration tools built in.</p>
@@ -267,7 +267,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-md border border-gray-200">
                 <div className="text-sm text-gray-500">Developer API & SDK</div>
                 <div className="mt-2 text-lg font-semibold text-gray-900">Embed pattern generation</div>
                 <p className="mt-2 text-sm text-gray-600">REST APIs and SDKs to add AI-driven pattern tools into your product.</p>
@@ -283,7 +283,7 @@ export default function Home() {
               {/* Beta access benefits + signup with right-side image on md+ screens */}
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 <div className="md:col-span-2 space-y-6">
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="bg-white p-6 rounded-md border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Beta Access Benefits</h3>
                     <ul className="list-disc pl-5 text-gray-700 space-y-2">
                       <li>Exclusive early access before public launch</li>
@@ -293,7 +293,7 @@ export default function Home() {
                     <p className="mt-4 text-sm text-gray-600">Be among the first to shape the future of fashion design.</p>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="bg-white p-6 rounded-md border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Join Beta Waitlist</h3>
                     <p className="text-sm text-gray-700 mb-4">Get early access to YOKO Styles and shape the future of AI-driven pattern generation</p>
 
@@ -326,7 +326,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-gray-900 text-white mt-12">
-        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-400">
+        <div className="max-w-7xl mx-auto px-6 pt-6 pb-24 text-center text-sm text-gray-400">
           <div>© {new Date().getFullYear()} YOKO Styles — All rights reserved.</div>
           <div className="mt-2 space-x-4">
             <a href="#" className="hover:underline">Privacy</a>

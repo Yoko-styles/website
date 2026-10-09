@@ -16,7 +16,7 @@ export default function Carousel3D({
     const autoplayRef = useRef<number | null>(null);
 
     useEffect(() => {
-        if (!autoplay) return;
+        if (!autoplay || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         autoplayRef.current = window.setInterval(() => {
             setIndex((i) => (i + 1) % len);
         }, interval);
@@ -115,8 +115,11 @@ export default function Carousel3D({
                             <button
                                 key={i}
                                 onClick={() => setIndex(i)}
-                                className={`w-2 h-2 rounded-full ${i === index ? "bg-black" : "bg-gray-300"}`}
-                            />
+                                aria-label={`Show ${_.title || `slide ${i + 1}`}`}
+                                className="p-2"
+                            >
+                                <span className={`block w-2 h-2 rounded-full ${i === index ? "bg-black" : "bg-gray-300"}`} />
+                            </button>
                         ))}
                     </div>
                 </div>
