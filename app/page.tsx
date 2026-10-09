@@ -19,10 +19,29 @@ export default function Home() {
             playsInline
           />
 
+          <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 flex items-center justify-center w-full h-full">
             <div className="text-center px-6">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight drop-shadow-md">Reinventing Fashion Design with AI</h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mt-4 max-w-3xl mx-auto">Generate production-ready sewing patterns instantly from text, images, or CAD files.</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight drop-shadow-md">Reinventing Fashion Design with AI</h1>
+              <p className="text-base md:text-lg text-white/90 mt-4 max-w-2xl mx-auto">Generate production-ready sewing patterns instantly from text, images, or CAD files.</p>
+              <a href="https://ai.yokostyles.com" className="inline-block mt-8 bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-100">Try our app</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="associations" className="py-10 bg-white border-b border-gray-100">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            <p className="text-xs uppercase tracking-widest text-gray-500">Associated with</p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 items-center justify-items-center">
+              {[
+                ["/iit.png", "IIIT Hyderabad"],
+                ["/iim.png", "IIM Kozhikode"],
+                ["/startuptn.png", "StartupTN"],
+                ["/aic.png", "AIC Raise"],
+              ].map(([src, name]) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={name} src={src} alt={name} title={name} className="h-12 md:h-14 w-auto max-w-full object-contain" />
+              ))}
             </div>
           </div>
         </section>
@@ -30,8 +49,8 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Our AI Solution</h2>
-                <p className="text-lg text-gray-700 mb-6">YOKO Styles converts ideas into production-ready patterns using multimodal AI trained on expert datasets. Faster iterations, fewer samples, and consistent sizing—designed for teams and factories.</p>
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-4">Our AI Solution</h2>
+                <p className="text-base md:text-lg text-gray-700 mb-6">YOKO Styles converts ideas into production-ready patterns using multimodal AI trained on expert datasets. Faster iterations, fewer samples, and consistent sizing—designed for teams and factories.</p>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -56,7 +75,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-6 flex items-center gap-4">
-                  <a href="#beta-email" className="inline-block bg-black text-white px-5 py-2 rounded-md font-semibold">Join Beta</a>
+                  <a href="https://ai.yokostyles.com" className="inline-block bg-black text-white px-5 py-2 rounded-md font-semibold">Try our app</a>
                   <a href="#why" className="text-sm text-gray-600 hover:underline">Learn how it works</a>
                 </div>
               </div>
@@ -82,8 +101,8 @@ export default function Home() {
               </div>
 
               <div className="order-first md:order-last">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 ">Why YOKO Styles?</h2>
-                <p className="text-lg text-gray-700 mb-6">Fashion design is stuck in the past — weeks of manual drafting, costly iterations, and limited scalability. We streamline the entire design-to-production flow so teams can move faster and with more confidence.</p>
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 ">Why YOKO Styles?</h2>
+                <p className="text-base md:text-lg text-gray-700 mb-6">Fashion design is stuck in the past — weeks of manual drafting, costly iterations, and limited scalability. We streamline the entire design-to-production flow so teams can move faster and with more confidence.</p>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
@@ -112,7 +131,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 flex items-center gap-4">
-                  <a href="#" className="inline-block bg-black text-white px-5 py-2 rounded-md font-semibold">Get started</a>
+                  <a href="https://ai.yokostyles.com" className="inline-block bg-black text-white px-5 py-2 rounded-md font-semibold">Get started</a>
                   <a href="#" className="inline-block border border-gray-300 text-gray-900 px-4 py-2 rounded-md">Contact sales</a>
                 </div>
               </div>
@@ -123,31 +142,31 @@ export default function Home() {
 
         <section id="capabilities" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">With YOKO Styles, <br /> you can</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-6">With YOKO Styles, <br /> you can</h2>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
               <li className="flex items-start gap-4">
-                <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
+                <span className="shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
                 <span>Generate sewing patterns in seconds, not weeks</span>
               </li>
 
               <li className="flex items-start gap-4">
-                <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
+                <span className="shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
                 <span>Use text, images, or CAD as input</span>
               </li>
 
               <li className="flex items-start gap-4">
-                <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
+                <span className="shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
                 <span>Fit garments across 50+ body types instantly</span>
               </li>
 
               <li className="flex items-start gap-4">
-                <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
+                <span className="shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
                 <span>Export ready-to-manufacture DXF patterns</span>
               </li>
 
               <li className="flex items-start gap-4">
-                <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
+                <span className="shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium">✓</span>
                 <span>Preview garments in 3D</span>
               </li>
             </ul>
@@ -156,7 +175,7 @@ export default function Home() {
 
         <section id="who" className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Who Is It For?</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">Who Is It For?</h2>
 
             <div className="items-center">
               <div>
@@ -235,7 +254,7 @@ export default function Home() {
 
         <section id="access" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Two Ways to Access</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-6">Two Ways to Access</h2>
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -244,7 +263,7 @@ export default function Home() {
                 <div className="mt-2 text-lg font-semibold text-gray-900">End-to-end creative tools</div>
                 <p className="mt-2 text-sm text-gray-600">Design, grade, and export production-ready patterns with collaboration tools built in.</p>
                 <div className="mt-4">
-                  <a href="#beta-email" className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm font-semibold">Join App Beta</a>
+                  <a href="https://ai.yokostyles.com" className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm font-semibold">Try our app</a>
                 </div>
               </div>
 
@@ -253,7 +272,7 @@ export default function Home() {
                 <div className="mt-2 text-lg font-semibold text-gray-900">Embed pattern generation</div>
                 <p className="mt-2 text-sm text-gray-600">REST APIs and SDKs to add AI-driven pattern tools into your product.</p>
                 <div className="mt-4">
-                  <a href="#beta-email" className="inline-block border border-gray-300 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Join App Beta</a>
+                  <a href="https://ai.yokostyles.com" className="inline-block border border-gray-300 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Try our app</a>
                 </div>
               </div>
             </div>
@@ -265,7 +284,7 @@ export default function Home() {
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 <div className="md:col-span-2 space-y-6">
                   <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Beta Access Benefits</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Beta Access Benefits</h3>
                     <ul className="list-disc pl-5 text-gray-700 space-y-2">
                       <li>Exclusive early access before public launch</li>
                       <li>Influence product features with direct feedback</li>
@@ -275,7 +294,7 @@ export default function Home() {
                   </div>
 
                   <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Join Beta Waitlist</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Join Beta Waitlist</h3>
                     <p className="text-sm text-gray-700 mb-4">Get early access to YOKO Styles and shape the future of AI-driven pattern generation</p>
 
                     {/* Use existing BetaSignup component if available, otherwise inline simple form */}
@@ -302,7 +321,6 @@ export default function Home() {
 
 
         </section>
-
 
 
       </main>
